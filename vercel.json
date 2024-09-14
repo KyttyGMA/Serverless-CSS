@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/theme-css.go": {
+      "runtime": "vercel-go@1.10.0"
+    }
+  }
+}
