@@ -45,12 +45,6 @@ func handleCSS(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	// Crear un manejador de la ruta /theme-css
-	http.HandleFunc("/theme-css", handleCSS)
+	http.HandleFunc("/theme", handleCSS)
 
-	// Servir en el puerto 8080
-	fmt.Println("Server running on port 8080...")
-	err := http.ListenAndServe(":8080", nil)
-	if err != nil {
-		fmt.Println("Error starting server:", err)
-	}
 }
