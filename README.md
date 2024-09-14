@@ -1,4 +1,4 @@
-# Dark/Light Mode CSS Serverless Function
+# Dark Mode CSS Serverless Function
 
 Este proyecto proporciona una función serverless escrita en Go que genera CSS dinámico para modos oscuro y claro. La función está desplegada en Vercel y responde a solicitudes HTTP con CSS basado en el parámetro `theme` de la consulta.
 
