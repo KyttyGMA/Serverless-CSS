@@ -1,15 +1,16 @@
-package main
+package handler
 
 import (
 	"fmt"
 	"net/http"
 )
 
-func handleCSS(w http.ResponseWriter, r *http.Request) {
+// Handler es la función exportada que Vercel invoca
+func Handler(w http.ResponseWriter, r *http.Request) {
 	// Obtener el parámetro de query "theme"
 	theme := r.URL.Query().Get("theme")
 	if theme == "" {
-		theme = "dark" // Ahora el valor por defecto es "dark"
+		theme = "dark" // El valor por defecto es "dark"
 	}
 
 	// Establecer el tipo de contenido a CSS
@@ -41,10 +42,4 @@ func handleCSS(w http.ResponseWriter, r *http.Request) {
 
 	// Enviar el CSS generado al cliente
 	fmt.Fprintf(w, css)
-}
-
-func main() {
-	// Crear un manejador de la ruta /theme-css
-	http.HandleFunc("/theme", handleCSS)
-
 }
